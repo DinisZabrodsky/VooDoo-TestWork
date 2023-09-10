@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VooDoo - TestWork</title>
+    <link rel="stylesheet" href="./src/css/output.css">
+</head>
+<body class=" bg-main">
+    <header class="border-b-2 border-black">
+        <div class="flex conteiner mx-auto justify-between p-[24px] h-[98px] mw-[1330px] xl:h-[194px] xl:p-[48px]  " >
+
+            <div class="flex space-x-1" >
+                <img class="w-[23px] h-[23px] xl:w-[45px] xl:h-[45px]" src="./src/img/Logomark.svg" alt="Logo">
+                <p class="font-bold text-2xl mt-[-8px] xl:text-5xl">VooDoo <br> Test </p>
+            </div>
+
+
+            <div class="flex items-center space-x-4 xl:items-start xl:space-x-12" >
+
+                <button class="w-[24px] h-[24px] cursor-pointer">
+                    <img src="./src/img/shopping-cart.svg" alt="shopping-cart">
+                </button>
+
+                <button class=" bg-black rounded text-white w-[78px] h-[34px] cursor-pointer xl:w-[100px] xl:h-[38px]">
+                    Sing-up
+                </button>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="mt-[100px] ">
+        <div class="conteiner mx-auto p-[24px] mw-[1330px]" >
+            <ul class="flex gap-6 flex-wrap justify-center" id="cards">
+            <li class="mb-[48px]">
+                <div class="relative block h-[300px] w-[342px] border-2 border-black rounded xl:w-[300px]">
+                    <img src="" alt="">
+                    <span class="absolute top-3 left-3 bg-black rounded text-white px-[8px] py-[2px] uppercase text-sm">used</span>
+                </div>
+
+                <div class="my-[12px]">
+                    <div class="flex justify-between">
+                        <h4 class="font-bold text-sm">Product name</h4>
+                        <p class="font-bold text-sm">Condition</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="font-bold text-sm">000 KR.</p>
+                        <p class="font-bold text-sm">Slightly used</p>
+                    </div>
+                </div>
+                
+                <button class=" bg-black rounded text-white w-full h-[42px] cursor-pointer">
+                    ADD TO CART
+                </button>
+            </li>
+            </ul>  
+        </div>
+
+        <ul class="flex w-[333px] h-[39px] my-[40px] gap-[10px] mx-auto">
+            <li class="flex items-center justify-center text-lg font-extralight w-[33px] h-[33px] rounded-full border border-black    bg-black text-white ">
+                1
+            </li>
+            <li class="flex items-center justify-center text-lg font-extralight w-[33px] h-[33px] rounded-full border border-black">
+                2
+            </li>
+            <li class="flex items-end justify-center text-lg font-extralight w-[33px] h-[33px] rounded-full border border-black">
+                ...
+            </li>
+        </ul>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
