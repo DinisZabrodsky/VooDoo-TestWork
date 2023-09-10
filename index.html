@@ -18,7 +18,7 @@
 
             <div class="flex items-center space-x-4 xl:items-start xl:space-x-12" >
 
-                <button class="w-[24px] h-[24px] cursor-pointer">
+                <button class="w-[24px] h-[24px] cursor-pointer" id="basket">
                     <img src="./src/img/shopping-cart.svg" alt="shopping-cart">
                 </button>
 
@@ -67,10 +67,10 @@
     </main> 
     <footer></footer>
 
-    <div class="absolute top-0 right-0 min-h-full w-[445px] px-[30px] py-[50px] bg-black text-main"  id="modal">
+    <div class="absolute top-0 right-0 min-h-full w-[445px] px-[30px] py-[50px] bg-black text-main overflow-scroll hidden"  id="basketModal">
         <div class="flex justify-between border-b border-main pb-5" >
             <h3 class="font-bold text-xl">Shopping Cart</h3>
-            <img src="./src/img/close-line.svg" alt="close button">
+            <img id="basketModalClose" src="./src/img/close-line.svg" alt="close button">
         </div>
 
         <ul class="mt-[50px] flex flex-col gap-[40px] border-b border-main pb-5">

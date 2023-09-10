@@ -1,3 +1,5 @@
+import './src/js/helpers/basketModal.js'
+
 import { buferRenderPagination } from "./src/js/service/renderPaginationPage.js"
 import { buferRenderCard } from "./src/js/service/renderProductCard.js"
 
