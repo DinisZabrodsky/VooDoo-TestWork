@@ -1,4 +1,6 @@
+import { basketList } from './src/js/helpers/basketListCreate.js'
 import './src/js/helpers/basketModal.js'
+import { renderCardInBaketBufer } from './src/js/service/renderCardInBasket.js'
 
 import { buferRenderPagination } from "./src/js/service/renderPaginationPage.js"
 import { buferRenderCard } from "./src/js/service/renderProductCard.js"
@@ -8,6 +10,8 @@ import { buferRenderCard } from "./src/js/service/renderProductCard.js"
 
 const cardConteiner = document.querySelector('#cards')
 const paginationConteiner = document.querySelector('#pagination')
+const basketModalList = document.querySelector('#basketModalList')
+cardConteiner.addEventListener('click', handleAddGoods)
 paginationConteiner.addEventListener('click', handlePagination)
 
 
@@ -16,6 +20,7 @@ let currentPage = 1
 let limit = 6
 let maxCard = 461 // по ідеї total повинен приходити разом із запитом, але тут його нема,  
 let maxPage = null
+const basket = []
 
 
 homePageLogic()
@@ -47,4 +52,14 @@ function handlePagination (event) {
     currentPage = Number(li.children[0].innerText)
     // console.log(Number(li.textContent))
     homePageLogic()
+}
+
+function handleAddGoods (event) {
+    if (event.target.nodeName !== "BUTTON") {
+        return;
+    }
+
+    basketList(event.target.parentNode, basket)
+    console.log(basket)
+    renderCardInBaketBufer(basket, basketModalList)
 }

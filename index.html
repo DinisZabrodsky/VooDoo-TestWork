@@ -70,10 +70,10 @@
     <div class="absolute top-0 right-0 min-h-full w-[445px] px-[30px] py-[50px] bg-black text-main overflow-scroll hidden"  id="basketModal">
         <div class="flex justify-between border-b border-main pb-5" >
             <h3 class="font-bold text-xl">Shopping Cart</h3>
-            <img id="basketModalClose" src="./src/img/close-line.svg" alt="close button">
+            <img class="cursor-pointer" id="basketModalClose" src="./src/img/close-line.svg" alt="close button">
         </div>
 
-        <ul class="mt-[50px] flex flex-col gap-[40px] border-b border-main pb-5">
+        <ul id="basketModalList" class="mt-[50px] flex flex-col gap-[40px] border-b border-main pb-5">
             <li class="flex gap-[18px] justify-between ">
                 <img  class="block rounded border-white w-[74px] h-[74px]" alt="">
 
@@ -81,9 +81,9 @@
                     <p>Product name</p>
                     <p>1 000 KR.</p>
 
-                    <div>
+                    <div class="flex space-x-2">
                         <span class="cursor-pointer">-</span>
-                        <span>1</span>
+                        <p>1</p>
                         <span class="cursor-pointer">+</span>
                     </div>
                 </div>
