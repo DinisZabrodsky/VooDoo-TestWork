@@ -2,7 +2,6 @@
 
 export function renderCardInBaketBufer (basket, basketModalList) {
     const totalConteiner = basketModalList.nextElementSibling.lastElementChild
-    console.log(totalConteiner)
 
     const bakedCardHTML = createBakedCardHTML(basket)
     basketModalList.innerHTML = bakedCardHTML
