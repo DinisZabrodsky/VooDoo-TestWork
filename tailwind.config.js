@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./**/*.html'],
   theme: {
+    fontFamily: {
+      'body': ['Space Grotesk'],
+      'footer' : ['Space Mono']
+    },
     extend: {
       colors:{
         'main': '#FCF7E6'

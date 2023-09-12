@@ -618,9 +618,8 @@ video {
   margin-bottom: 12px;
 }
 
-.my-\[40px\] {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.mb-\[196px\] {
+  margin-bottom: 196px;
 }
 
 .mb-\[48px\] {
@@ -637,6 +636,10 @@ video {
 
 .mt-\[35px\] {
   margin-top: 35px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
 }
 
 .mt-\[50px\] {
@@ -687,6 +690,10 @@ video {
   height: 74px;
 }
 
+.h-\[82px\] {
+  height: 82px;
+}
+
 .h-\[98px\] {
   height: 98px;
 }
@@ -701,6 +708,10 @@ video {
 
 .w-\[24px\] {
   width: 24px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[333px\] {
@@ -721,6 +732,10 @@ video {
 
 .w-\[78px\] {
   width: 78px;
+}
+
+.w-\[82px\] {
+  width: 82px;
 }
 
 .w-full {
@@ -771,6 +786,10 @@ video {
   gap: 40px;
 }
 
+.gap-\[48px\] {
+  gap: 48px;
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -795,12 +814,14 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.overflow-scroll {
-  overflow: scroll;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-scroll {
@@ -831,6 +852,10 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-t-2 {
+  border-top-width: 2px;
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -856,8 +881,17 @@ video {
   background-color: rgb(252 247 230 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-\[24px\] {
   padding: 24px;
+}
+
+.p-\[48px\] {
+  padding: 48px;
 }
 
 .px-\[30px\] {
@@ -961,6 +995,10 @@ video {
     align-items: flex-start;
   }
 
+  .xl\:gap-\[24px\] {
+    gap: 24px;
+  }
+
   .xl\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(3rem * var(--tw-space-x-reverse));
@@ -969,6 +1007,16 @@ video {
 
   .xl\:p-\[48px\] {
     padding: 48px;
+  }
+
+  .xl\:px-\[120px\] {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .xl\:py-\[80px\] {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .xl\:text-5xl {

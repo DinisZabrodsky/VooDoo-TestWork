@@ -57,10 +57,56 @@
             </ul>  
         </div>
 
-        <ul class="flex w-[333px] h-[39px] my-[40px] gap-[10px] mx-auto" id="pagination">
+        <ul class="flex w-[333px] h-[39px] mt-[40px] mb-[196px] gap-[10px] mx-auto" id="pagination">
+            <li class="flex items-center justify-center text-lg font-extralight w-[33px] h-[33px] rounded-full border border-black cursor-pointer bg-black text-white">
+                <span>
+                    2
+                </span>
+            </li>`
         </ul>
     </main> 
-    <footer></footer>
+
+
+    <footer class="border-t-2 border-black p-[48px] xl:px-[120px] xl:py-[80px] bg-white" >
+        <div class="flex justify-between gap-[48px] xl:gap-[24px]">
+            <div class="flex justify-center items-center w-[300px]">
+                <img class="h-[82px] w-[82px]" src="./src/img/Logomark.svg" alt="logo">
+            </div>
+            <ul class="w-[300px] space-y-5">
+                <li><p>FAQ</p></li>
+                <li><p>RETURNS</p></li>
+                <li><p>CONTACT</p></li>
+            </ul>
+            <ul class="w-[300px] space-y-5">
+                <li>
+                    <p>TERMS & CONDITIONS</p>
+                </li>
+                <li>
+                    <p>PRIVACY POLICY</p>
+                </li>
+                <li>
+                    <p>COOKIE POLICY</p>
+                </li>
+                <li>
+                    <p>COOKIE SETTINGS</p>
+                </li>
+            </ul>
+            <ul class="w-[300px] space-y-5">
+                <li>
+                    <p>ABOUT VOODOO</p>
+                </li>
+                <li>
+                    <p>CAREER</p>
+                </li>
+                <li>
+                    <p>FACEBOOK</p>
+                </li>
+                <li>
+                    <p>INSTAGRAM</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <div class="absolute top-0 right-0 min-h-full  px-[30px] py-[50px] bg-black text-main w-full tb:w-[445px] overflow-y-scroll hidden "  id="basketModal">
         <div class="flex justify-between border-b border-main pb-5" >
@@ -69,7 +115,21 @@
         </div>
 
         <ul id="basketModalList" class="mt-[50px] flex flex-col gap-[40px] border-b border-main pb-5">
-            
+            <li data-id=${card.id} class="flex gap-[18px] justify-between ">
+                <img  class="block rounded border-white w-[74px] h-[74px]"  src=${card.img} alt=${card.name}>
+        
+                <div class="space-y-1 flex-1 font-bold text-sm">
+                    <p>Titel</p>
+                    <p>0000 KR.</p>
+        
+                    <div class="flex space-x-2"> 
+                        <span data-value="decrement" class="cursor-pointer">-</span>
+                        <p>1</p>
+                        <span data-value="increment" class="cursor-pointer">+</span>
+                    </div>
+                </div>
+                <img  data-value ="delete" class="block w-[24px] h-[24px] cursor-pointer" src="./src/img/delete-bin-6-line.svg" alt="delete tovar">
+            </li>
         </ul>
 
         <div class="flex justify-between mt-[35px] font-bold text-sm">
