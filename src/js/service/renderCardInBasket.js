@@ -24,12 +24,12 @@ function createBakedCardHTML (basket) {
             <p>${card.price} KR.</p>
 
             <div class="flex space-x-2"> 
-                <span class="cursor-pointer">-</span>
+                <span data-value="decrement" class="cursor-pointer">-</span>
                 <p>${card.value}</p>
-                <span class="cursor-pointer">+</span>
+                <span data-value="increment" class="cursor-pointer">+</span>
             </div>
         </div>
-        <img  class="block w-[24px] h-[24px] cursor-pointer" src="./src/img/delete-bin-6-line.svg" alt="delete tovar">
+        <img  data-value ="delete" class="block w-[24px] h-[24px] cursor-pointer" src="./src/img/delete-bin-6-line.svg" alt="delete tovar">
     </li>
         `}).join("")
 }

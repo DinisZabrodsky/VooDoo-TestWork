@@ -13,6 +13,8 @@ const paginationConteiner = document.querySelector('#pagination')
 const basketModalList = document.querySelector('#basketModalList')
 cardConteiner.addEventListener('click', handleAddGoods)
 paginationConteiner.addEventListener('click', handlePagination)
+basketModalList.addEventListener('click', handleModalClickValue)
+
 
 
 const screenVP = screen.width // Розширення ерану
@@ -20,7 +22,7 @@ let currentPage = 1
 let limit = 6
 let maxCard = 461 // по ідеї total повинен приходити разом із запитом, але тут його нема,  
 let maxPage = null
-const basket = []
+const basket = [] // В ідеалі було б добре винести це в окремий файл і реалізувати за допомогою класу або замиканням створивши приватни список із гетерами і сетерами
 
 
 homePageLogic()
@@ -60,6 +62,41 @@ function handleAddGoods (event) {
     }
 
     basketList(event.target.parentNode, basket)
-    console.log(basket)
     renderCardInBaketBufer(basket, basketModalList)
+}
+
+function handleModalClickValue (event) {
+    
+    if (!event.target.dataset.value) {
+        return;
+    }
+
+    const elementIDSpan = event.target.parentNode.parentNode.parentNode.dataset.id
+    const elementIDDelete = event.target.parentNode.dataset.id
+    
+    let elementID = null
+
+    elementIDSpan ? elementID = elementIDSpan : elementID = elementIDDelete
+
+    const findGoods = Number( basket.findIndex(element => element.id === elementID ))
+    const value = event.target.dataset.value
+
+    if (findGoods !== -1 && value === 'decrement') {
+        basket[findGoods].value > 0 ? basket[findGoods].value -= 1 : basket[findGoods].value = 0
+        renderCardInBaketBufer(basket, basketModalList)
+        return
+    }
+
+    if (findGoods !== -1 && value === 'increment') {
+        basket[findGoods].value += 1 
+        renderCardInBaketBufer(basket, basketModalList)
+        return
+    }
+
+    if(findGoods !== -1 && value === 'delete') {
+        basket.splice(findGoods, 1)
+        renderCardInBaketBufer(basket, basketModalList)
+        return
+    }
+
 }

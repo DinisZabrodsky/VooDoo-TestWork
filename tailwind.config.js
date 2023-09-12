@@ -7,7 +7,8 @@ module.exports = {
         'main': '#FCF7E6'
       },
       screens: {
-       'xl': '1280px'
+        'tb': '768px',
+        'xl': '1280px'
       }
     },
   },
