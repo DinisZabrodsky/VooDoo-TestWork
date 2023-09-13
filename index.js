@@ -27,15 +27,17 @@ const basket = [] // В ідеалі було б добре винести це 
 
 homePageLogic()
 
+// Функція котра займається рендером карток та пагінацї
 async function homePageLogic () {
     
-    quantityElement()
-    buferRenderCard(limit, currentPage, cardConteiner)
+    quantityElement() // За шириною браузера визначає кількість карток на сторніці
+    buferRenderCard(limit, currentPage, cardConteiner) // Робить GET запити та рендерить картки
     buferRenderPagination(limit, maxCard, currentPage, paginationConteiner) // Не до кінця розумію як повинні відображатись сторніки пагінації за 3 сторінкою, але загальну логіку передав 
     
 }
 
 
+// Визначає кількість карток на сторінці за розширенням екрану
 function quantityElement () {
     if (screenVP < 768){
         return limit = 6
@@ -46,6 +48,7 @@ function quantityElement () {
     }
 }
 
+// Функція відслідковує натискання на пелементи пагінації, після чого дістає значення та переписує currentPage після чого викликається функція  homePageLogic 
 function handlePagination (event) {
 
     const li = event.target.closest("li")
@@ -56,6 +59,8 @@ function handlePagination (event) {
     homePageLogic()
 }
 
+// Функція відповідає за відслідковування натискання на кнопку "притбати" та витягає дані із картки, записує їх до обєкту з покупками у вигляді масиву
+// та запускає функцію рендеру карток в корзині
 function handleAddGoods (event) {
     if (event.target.nodeName !== "BUTTON") {
         return;
@@ -65,6 +70,8 @@ function handleAddGoods (event) {
     renderCardInBaketBufer(basket, basketModalList)
 }
 
+
+// Функія котра слідкує за натискання кнопок "-", "+" та видалення товару із корзини та запускає рендер корзини із товарами по новому
 function handleModalClickValue (event) {
     
     if (!event.target.dataset.value) {
